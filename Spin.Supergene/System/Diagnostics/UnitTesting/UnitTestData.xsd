@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UnitTestData" targetNamespace="http://tempuri.org/UnitTestData.xsd" xmlns:mstns="http://tempuri.org/UnitTestData.xsd" xmlns="http://tempuri.org/UnitTestData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UnitTestData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="UnitTestData" msprop:Generator_DataSetName="UnitTestData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Actions" msprop:Generator_UserTableName="Actions" msprop:Generator_RowDeletedName="ActionsRowDeleted" msprop:Generator_RowChangedName="ActionsRowChanged" msprop:Generator_RowClassName="ActionsRow" msprop:Generator_RowChangingName="ActionsRowChanging" msprop:Generator_RowEvArgName="ActionsRowChangeEvent" msprop:Generator_RowEvHandlerName="ActionsRowChangeEventHandler" msprop:Generator_TableClassName="ActionsDataTable" msprop:Generator_TableVarName="tableActions" msprop:Generator_RowDeletingName="ActionsRowDeleting" msprop:Generator_TablePropName="Actions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FullName" msprop:Generator_UserColumnName="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CreateImage" msdata:DataType="System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" msprop:Generator_UserColumnName="CreateImage" msprop:Generator_ColumnVarNameInTable="columnCreateImage" msprop:Generator_ColumnPropNameInRow="CreateImage" msprop:Generator_ColumnPropNameInTable="CreateImageColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestImage" msdata:DataType="System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" msprop:Generator_UserColumnName="TestImage" msprop:Generator_ColumnVarNameInTable="columnTestImage" msprop:Generator_ColumnPropNameInRow="TestImage" msprop:Generator_ColumnPropNameInTable="TestImageColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestStaticImage" msdata:DataType="System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" msprop:Generator_UserColumnName="TestStaticImage" msprop:Generator_ColumnPropNameInRow="TestStaticImage" msprop:Generator_ColumnVarNameInTable="columnTestStaticImage" msprop:Generator_ColumnPropNameInTable="TestStaticImageColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="DestroyImage" msdata:DataType="System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" msprop:Generator_UserColumnName="DestroyImage" msprop:Generator_ColumnVarNameInTable="columnDestroyImage" msprop:Generator_ColumnPropNameInRow="DestroyImage" msprop:Generator_ColumnPropNameInTable="DestroyImageColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="CreateException" msdata:DataType="System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreateException" msprop:Generator_ColumnVarNameInTable="columnCreateException" msprop:Generator_ColumnPropNameInRow="CreateException" msprop:Generator_ColumnPropNameInTable="CreateExceptionColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestException" msdata:DataType="System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TestException" msprop:Generator_ColumnVarNameInTable="columnTestException" msprop:Generator_ColumnPropNameInRow="TestException" msprop:Generator_ColumnPropNameInTable="TestExceptionColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestStaticException" msdata:DataType="System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TestStaticException" msprop:Generator_ColumnVarNameInTable="columnTestStaticException" msprop:Generator_ColumnPropNameInRow="TestStaticException" msprop:Generator_ColumnPropNameInTable="TestStaticExceptionColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="DestroyException" msdata:DataType="System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="DestroyException" msprop:Generator_ColumnVarNameInTable="columnDestroyException" msprop:Generator_ColumnPropNameInRow="DestroyException" msprop:Generator_ColumnPropNameInTable="DestroyExceptionColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Dependencies" msprop:Generator_UserColumnName="Dependencies" msprop:Generator_ColumnVarNameInTable="columnDependencies" msprop:Generator_ColumnPropNameInRow="Dependencies" msprop:Generator_ColumnPropNameInTable="DependenciesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="EnableTest" msprop:Generator_UserColumnName="EnableTest" msprop:Generator_ColumnPropNameInRow="EnableTest" msprop:Generator_ColumnVarNameInTable="columnEnableTest" msprop:Generator_ColumnPropNameInTable="EnableTestColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TargetType" msdata:DataType="System.Type, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TargetType" msprop:Generator_ColumnVarNameInTable="columnTargetType" msprop:Generator_ColumnPropNameInRow="TargetType" msprop:Generator_ColumnPropNameInTable="TargetTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CanCreate" msprop:Generator_UserColumnName="CanCreate" msprop:Generator_ColumnPropNameInRow="CanCreate" msprop:Generator_ColumnVarNameInTable="columnCanCreate" msprop:Generator_ColumnPropNameInTable="CanCreateColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CanTest" msprop:Generator_UserColumnName="CanTest" msprop:Generator_ColumnPropNameInRow="CanTest" msprop:Generator_ColumnVarNameInTable="columnCanTest" msprop:Generator_ColumnPropNameInTable="CanTestColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CanTestStatic" msprop:Generator_UserColumnName="CanTestStatic" msprop:Generator_ColumnVarNameInTable="columnCanTestStatic" msprop:Generator_ColumnPropNameInRow="CanTestStatic" msprop:Generator_ColumnPropNameInTable="CanTestStaticColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CanDestroy" msprop:Generator_UserColumnName="CanDestroy" msprop:Generator_ColumnPropNameInRow="CanDestroy" msprop:Generator_ColumnVarNameInTable="columnCanDestroy" msprop:Generator_ColumnPropNameInTable="CanDestroyColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ActiveInstance" msprop:Generator_UserColumnName="ActiveInstance" msprop:Generator_ColumnVarNameInTable="columnActiveInstance" msprop:Generator_ColumnPropNameInRow="ActiveInstance" msprop:Generator_ColumnPropNameInTable="ActiveInstanceColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="CreateMethod" msdata:DataType="System.Reflection.MethodInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreateMethod" msprop:Generator_ColumnPropNameInRow="CreateMethod" msprop:Generator_ColumnVarNameInTable="columnCreateMethod" msprop:Generator_ColumnPropNameInTable="CreateMethodColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestMethod" msdata:DataType="System.Reflection.MethodInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TestMethod" msprop:Generator_ColumnPropNameInRow="TestMethod" msprop:Generator_ColumnVarNameInTable="columnTestMethod" msprop:Generator_ColumnPropNameInTable="TestMethodColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="TestStaticMethod" msdata:DataType="System.Reflection.MethodInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TestStaticMethod" msprop:Generator_ColumnVarNameInTable="columnTestStaticMethod" msprop:Generator_ColumnPropNameInRow="TestStaticMethod" msprop:Generator_ColumnPropNameInTable="TestStaticMethodColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="DestroyMethod" msdata:DataType="System.Reflection.MethodInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="DestroyMethod" msprop:Generator_ColumnPropNameInRow="DestroyMethod" msprop:Generator_ColumnVarNameInTable="columnDestroyMethod" msprop:Generator_ColumnPropNameInTable="DestroyMethodColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dependencies" msprop:Generator_UserTableName="Dependencies" msprop:Generator_RowDeletedName="DependenciesRowDeleted" msprop:Generator_RowChangedName="DependenciesRowChanged" msprop:Generator_RowClassName="DependenciesRow" msprop:Generator_RowChangingName="DependenciesRowChanging" msprop:Generator_RowEvArgName="DependenciesRowChangeEvent" msprop:Generator_RowEvHandlerName="DependenciesRowChangeEventHandler" msprop:Generator_TableClassName="DependenciesDataTable" msprop:Generator_TableVarName="tableDependencies" msprop:Generator_RowDeletingName="DependenciesRowDeleting" msprop:Generator_TablePropName="Dependencies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ParentID" msprop:Generator_UserColumnName="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" type="xs:int" />
+              <xs:element name="ChildID" msprop:Generator_UserColumnName="ChildID" msprop:Generator_ColumnVarNameInTable="columnChildID" msprop:Generator_ColumnPropNameInRow="ChildID" msprop:Generator_ColumnPropNameInTable="ChildIDColumn" type="xs:int" />
+              <xs:element name="SortIndex" msprop:Generator_UserColumnName="SortIndex" msprop:Generator_ColumnVarNameInTable="columnSortIndex" msprop:Generator_ColumnPropNameInRow="SortIndex" msprop:Generator_ColumnPropNameInTable="SortIndexColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="ActionsPK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Actions" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="DependenciesPK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Dependencies" />
+      <xs:field xpath="mstns:ParentID" />
+      <xs:field xpath="mstns:ChildID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ChildIDFK" msdata:parent="Actions" msdata:child="Dependencies" msdata:parentkey="ID" msdata:childkey="ParentID" msprop:Generator_UserRelationName="ChildIDFK" msprop:Generator_RelationVarName="relationChildIDFK" msprop:Generator_UserChildTable="Dependencies" msprop:Generator_UserParentTable="Actions" msprop:Generator_ParentPropName="ActionsRowByChildIDFK" msprop:Generator_ChildPropName="GetDependenciesRowsByChildIDFK" />
+      <msdata:Relationship name="ParentIDFK" msdata:parent="Actions" msdata:child="Dependencies" msdata:parentkey="ID" msdata:childkey="ChildID" msprop:Generator_UserRelationName="ParentIDFK" msprop:Generator_RelationVarName="relationParentIDFK" msprop:Generator_UserChildTable="Dependencies" msprop:Generator_UserParentTable="Actions" msprop:Generator_ParentPropName="ActionsRowByParentIDFK" msprop:Generator_ChildPropName="GetDependenciesRowsByParentIDFK" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

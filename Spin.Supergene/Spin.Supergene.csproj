@@ -1,0 +1,222 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release;Web Debug</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Web Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Web Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System\Diagnostics\UnitTesting\**" />
+    <Compile Remove="System\Diagnostics\UnitTest\**" />
+    <Compile Remove="System\Messaging\**" />
+    <Compile Remove="System\Net\**" />
+    <Compile Remove="System\Windows\**" />
+    <EmbeddedResource Remove="System\Diagnostics\UnitTesting\**" />
+    <EmbeddedResource Remove="System\Diagnostics\UnitTest\**" />
+    <EmbeddedResource Remove="System\Messaging\**" />
+    <EmbeddedResource Remove="System\Net\**" />
+    <EmbeddedResource Remove="System\Windows\**" />
+    <None Remove="System\Diagnostics\UnitTesting\**" />
+    <None Remove="System\Diagnostics\UnitTest\**" />
+    <None Remove="System\Messaging\**" />
+    <None Remove="System\Net\**" />
+    <None Remove="System\Windows\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="System\Collections\CollectionComparerT.cs" />
+    <Compile Remove="System\Collections\CollectionComparerTT.cs" />
+    <Compile Remove="System\Collections\CompareResultT.cs" />
+    <Compile Remove="System\Collections\Concurrent\CircularQueue.cs" />
+    <Compile Remove="System\Collections\Concurrent\ConcurrentPool.cs" />
+    <Compile Remove="System\Collections\Generic\CacheItems.cs" />
+    <Compile Remove="System\Collections\Generic\CircularQueue.cs" />
+    <Compile Remove="System\Collections\Generic\CollectionBase.old.cs" />
+    <Compile Remove="System\Collections\Generic\PoolT.cs" />
+    <Compile Remove="System\Collections\Hierarchy\DetailedTreeNode.cs" />
+    <Compile Remove="System\Collections\Specialized\NBufferT.cs" />
+    <Compile Remove="System\Data\Enumerations.cs" />
+    <Compile Remove="System\Data\IDataReaderExtension.cs" />
+    <Compile Remove="System\Data\SqlClient\SqlXmlBulkLoad.cs" />
+    <Compile Remove="System\Diagnostics\DataTableTraceListener.cs" />
+    <Compile Remove="System\Diagnostics\DataTableTraceListenerData.Designer.cs" />
+    <Compile Remove="System\Diagnostics\DataTableTraceListenerData1.Designer.cs" />
+    <Compile Remove="System\Diagnostics\IUnit.cs" />
+    <Compile Remove="System\Diagnostics\UnitTestExceptions.cs" />
+    <Compile Remove="System\Diagnostics\UnitTestResult.cs" />
+    <Compile Remove="System\Diagnostics\UnitTestResultItem.cs" />
+    <Compile Remove="System\Diagnostics\UnitTestResultItems.cs" />
+    <Compile Remove="System\GenericObject.cs" />
+    <Compile Remove="System\IO\ActiveSync.cs" />
+    <Compile Remove="System\IO\BinaryWriter.cs" />
+    <Compile Remove="System\IO\CeFileStream.cs" />
+    <Compile Remove="System\IO\CisFtp.cs" />
+    <Compile Remove="System\IO\Compression\ZipFile.cs" />
+    <Compile Remove="System\IO\Compression\ZipFileEntries.cs" />
+    <Compile Remove="System\IO\Compression\ZipFileEntry.cs" />
+    <Compile Remove="System\IO\DriveSpace.cs" />
+    <Compile Remove="System\IO\Fax.cs" />
+    <Compile Remove="System\IO\ModemStream.cs" />
+    <Compile Remove="System\IO\Packet.cs" />
+    <Compile Remove="System\IO\PacketException.cs" />
+    <Compile Remove="System\IO\Protocol.cs" />
+    <Compile Remove="System\IO\RAPI.cs" />
+    <Compile Remove="System\IO\RapiException.cs" />
+    <Compile Remove="System\IO\RS232Stream.cs" />
+    <Compile Remove="System\IO\UnmanagedMemoryStream.cs" />
+    <Compile Remove="System\Linq\IGrouping.cs" />
+    <Compile Remove="System\Runtime\InteropServices\UnmanagedBuffer.cs" />
+    <Compile Remove="System\Security\Cryptography\Crc32.cs" />
+    <Compile Remove="System\Threading\Workers\BackgroundWorker.cs" />
+    <Compile Remove="System\Threading\Workers\CircularQueueWorker.cs" />
+    <Compile Remove="System\Threading\Workers\Heartbeat.cs" />
+    <Compile Remove="System\Threading\Workers\LoopWorker.cs" />
+    <Compile Remove="System\Threading\Workers\MulticastWorker.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="System\Diagnostics\DataTableTraceListenerData.xsc" />
+    <None Remove="System\Diagnostics\DataTableTraceListenerData.xsd" />
+    <None Remove="System\Diagnostics\DataTableTraceListenerData.xss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="System\Net\EMailAddress.cs" />
+    <Compile Include="System\Net\TcpConnectionWorker.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="System\Collections\IPagedCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Collections\Specialized\BitStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Collections\Specialized\BitVector24.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Collections\Specialized\DecimalDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Collections\Specialized\Int32Index.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Collections\Specialized\Int32IndexA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Data\IDisconnected.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Data\InvalidUniqueIDException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\DuplicateIndexException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\IO\BinaryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\IO\FileVersion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\IO\ProtocolException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\IO\StreamSpy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Runtime\InteropServices\BcdMarshal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Runtime\InteropServices\InteropEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Security\Cryptography\Adler32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Security\Cryptography\CRC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Text\ASCII.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncAtomicBatchOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncBatchException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncBatchInvokation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncBatchOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncOperationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\AsyncOperationResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\CompoundWaitHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Threading\StatefulWorker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\TimeoutException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="System\Web\HttpUpload.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="System\Threading\Tasks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\ref\netcoreapp2.2\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
