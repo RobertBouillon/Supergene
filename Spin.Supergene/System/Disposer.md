@@ -25,7 +25,7 @@ public class Foo : Disposable
     public HttpClient => Disposer.Assert(_client);
     public string Fetch() => Disposer.Assert(() => _client.Get("www.contoso.com"));
 
-    protected override DisposeManaged => _client?.Dispose();
+    protected override DisposeManaged() => _client?.Dispose();
 }
 ```
 
@@ -47,6 +47,6 @@ public class Foo : Disposable
         Bar(_handle);
     }
 
-    protected override DisposeUnmanaged => Free(_handle);
+    protected override DisposeUnmanaged() => Free(_handle);
 }
 ```
