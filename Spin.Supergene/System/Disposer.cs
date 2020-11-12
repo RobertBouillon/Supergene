@@ -5,17 +5,38 @@ using System.Text;
 
 namespace System
 {
-  public class Disposer
+  public struct Disposer
   {
+    #region Static Members
+
+    public static void Dispose(params IDisposable[] disposable)
+    {
+      foreach (var item in disposable)
+        item?.Dispose();
+    }
+
+    public static void Dispose(IEnumerable<IDisposable> disposable)
+    {
+      foreach (var item in disposable)
+        item?.Dispose();
+    }
+    #endregion
+
     public bool IsDisposed { get; private set; }
-    public Disposer(){}
+
     public void Assert()
     {
       if (IsDisposed)
         throw new Exception("Object has been disposed");
     }
 
-    //Helpful for short-hand:  private void Foo() => _disposer.Assert(()=>_disposable.Bar());
+    public T Assert<T>(T field)
+    {
+      if (IsDisposed)
+        throw new Exception("Object has been disposed");
+      return field;
+    }
+
     public void Assert(Action action)
     {
       if (IsDisposed)
@@ -31,18 +52,6 @@ namespace System
       return func();
     }
 
-    public static void Dispose(params IDisposable[] disposable)
-    {
-      foreach (var item in disposable)
-        item?.Dispose();
-    }
-
-    public static void Dispose(IEnumerable<IDisposable> disposable)
-    {
-      foreach (var item in disposable)
-        item?.Dispose();
-    }
-
     public void SetDisposed()
     {
       if (IsDisposed)
@@ -54,7 +63,7 @@ namespace System
     {
       if (IsDisposed)
         return false;
-      SetDisposed();
+      IsDisposed = true;
       return true;
     }
   }

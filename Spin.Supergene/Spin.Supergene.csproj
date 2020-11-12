@@ -213,10 +213,4 @@
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="System.Memory">
-      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\ref\netcoreapp2.2\System.Memory.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
