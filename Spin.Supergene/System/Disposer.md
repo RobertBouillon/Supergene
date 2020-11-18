@@ -6,6 +6,7 @@ The disposer class helps to create objects that encapsulate unmanaged resources.
 1. Ensure that Dispose logic is only called once.
 2. Provide utility methods to assert that the object is not disposed when being used
 3. Provide a common interface for disposing managed vs. unmanaged resources
+4. Provide an inheritable interface that is clean about when to dispose managed vs. unmanaged resources
 
 # How to Use 
 
@@ -13,6 +14,8 @@ Inherit this class when:
 
 1. Your class has fields that implement `IDisposable`
 2. When your class has fields that represent unmanaged resources
+
+If your class does not have fields that may contain unmanaged or disposable resources, you should **not** be implementing the [disposable pattern](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose)!
 
 ## Managed Resources
 
