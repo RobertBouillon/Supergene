@@ -6,12 +6,13 @@ using System.Text;
 
 namespace System
 {
-  public class Try
+  /// <remarks>Usage: using static System.FluentTry;</remarks>
+  public class FluentTry
   {
-    public static StatefulTry<T> Do<T>(Func<T> func) => new StatefulTry<T>(func);
-    public static Try Do(Action action) => new Try(action);
+    public static StatefulTry<T> Try<T>(Func<T> func) => new StatefulTry<T>(func);
+    public static FluentTry Try(Action action) => new FluentTry(action);
 
-    public class StatefulTry<T> : Try
+    public class StatefulTry<T> : FluentTry
     {
       public T Value { get; }
       public StatefulTry(Func<T> action) : base()
@@ -62,8 +63,8 @@ namespace System
 
     private Exception _error;
     private bool _handled = false;
-    protected Try() { }
-    public Try(Action action)
+    protected FluentTry() { }
+    public FluentTry(Action action)
     {
       try
       {
@@ -75,7 +76,7 @@ namespace System
       }
     }
 
-    public Try Catch()
+    public FluentTry Catch()
     {
       if (_error != null && !_handled)
         _handled = true;
@@ -83,7 +84,7 @@ namespace System
       return this;
     }
 
-    public Try Catch(Action<Exception> action)
+    public FluentTry Catch(Action<Exception> action)
     {
       #region Validation
       if (action == null)
@@ -98,7 +99,7 @@ namespace System
       return this;
     }
 
-    public Try Catch<T>(Action<T> action) where T : Exception
+    public FluentTry Catch<T>(Action<T> action) where T : Exception
     {
       #region Validation
       if (action == null)
@@ -114,21 +115,21 @@ namespace System
       return this;
     }
 
-    public Try Wrap(Func<Exception, Exception> action)
+    public FluentTry Wrap(Func<Exception, Exception> action)
     {
       if (_error != null && !_handled)
         throw action(_error);
       return this;
     }
 
-    public Try Catch<T>(Func<T, Exception> action) where T : Exception
+    public FluentTry Catch<T>(Func<T, Exception> action) where T : Exception
     {
       if (_error != null && !_handled && _error is T error)
         throw action(error);
       return this;
     }
 
-    public Try Finally(Action action)
+    public FluentTry Finally(Action action)
     {
       action();
       return this;
@@ -136,13 +137,13 @@ namespace System
 
     private static void Test()
     {
-      new Try(Foo).Catch(); //Swallow error
-      new Try(Foo).Wrap(x => new Exception("Wrapped", x)); //Wrap error
-      new Try(Foo).Catch(x => Foo(x)); //Handle Error
-      new Try(Foo).Catch<IOException>(x => Foo(x)).Catch(x => Foo(x)); //Cascade Error
-      new Try(Foo).Finally(Foo);
-      Try.Do(Foo).Finally(Foo);
-      var val = Try.Do(Bar).Value;
+      new FluentTry(Foo).Catch(); //Swallow error
+      new FluentTry(Foo).Wrap(x => new Exception("Wrapped", x)); //Wrap error
+      new FluentTry(Foo).Catch(x => Foo(x)); //Handle Error
+      new FluentTry(Foo).Catch<IOException>(x => Foo(x)).Catch(x => Foo(x)); //Cascade Error
+      new FluentTry(Foo).Finally(Foo);
+      FluentTry.Try(Foo).Finally(Foo);
+      var val = FluentTry.Try(Bar).Value;
     }
 
     private static void Foo() { }
