@@ -8,9 +8,6 @@ namespace System.Collections.Generic
 {
   public static class ListExtenstions
   {
-    public static void SortParallel<T>(this List<T> source)
-    {
-      
-    }
+    public static void Sort<T>(this List<T> list, Func<T, IComparable> selector) => list.Sort(new Comparison<T>((x, y) => selector(x).CompareTo(selector(y))));
   }
 }
