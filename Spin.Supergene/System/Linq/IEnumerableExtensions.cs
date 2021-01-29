@@ -421,6 +421,8 @@ namespace System.Linq
 
     public static string Join<T>(this IEnumerable<T> items, char delimiter) => String.Join(delimiter, items);
     public static string Join<T>(this IEnumerable<T> items, string delimiter = ", ") => String.Join(delimiter, items);
+
+    public static Queue<T> ToQueue<T>(this IEnumerable<T> items) => new Queue<T>(items);
     //This is already optimized
     //Optimize - only allocate the data needed (specified in count). Bounds already checked by indexer set.
     //public static T[] ToArray<T>(this IEnumerable<T> source, int count)
