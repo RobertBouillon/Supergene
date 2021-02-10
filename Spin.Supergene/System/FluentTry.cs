@@ -59,6 +59,18 @@ namespace System
         base.Wrap(action);
         return this;
       }
+      public new bool Succeeded(out T value)
+      {
+        value = Value;
+        return base.Succeeded;
+      }
+
+      public new bool Succeeded(out T value, out Exception error)
+      {
+        value = Value;
+        error = _error;
+        return base.Succeeded;
+      }
     }
 
     private Exception _error;
@@ -134,6 +146,8 @@ namespace System
       action();
       return this;
     }
+
+    public bool Succeeded => _error is null;
 
     private static void Test()
     {

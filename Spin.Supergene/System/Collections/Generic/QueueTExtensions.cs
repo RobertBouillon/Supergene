@@ -18,5 +18,12 @@ namespace System.Collections.Generic
       for (int i = 0; i < count; i++)
         yield return queue.Dequeue();
     }
+
+    public static IEnumerable<T> DequeueUpTo<T>(this Queue<T> queue, int count)
+    {
+      for (int i = 0; i < count; i++)
+        if(queue.Count > 0)
+          yield return queue.Dequeue();
+    }
   }
 }

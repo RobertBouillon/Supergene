@@ -420,7 +420,23 @@ namespace System.Linq
     }
 
     public static string Join<T>(this IEnumerable<T> items, char delimiter) => String.Join(delimiter, items);
-    public static string Join<T>(this IEnumerable<T> items, string delimiter = ", ") => String.Join(delimiter, items);
+    //public static string Join<T>(this IEnumerable<T> items, string delimiter = ", ") => String.Join(delimiter, items);
+    public static string Join<T>(this IEnumerable<T> items, string delimiter = ", ", string terminator = ", ")
+    {
+      if (terminator == delimiter)
+        return String.Join(delimiter, items);
+
+      var source = items.ToList();
+      if (source.Count == 0)
+        throw new ArgumentException("Sequence contains no elements");
+
+      if (source.Count == 1)
+        return source.First().ToString();
+      else if (source.Count == 2)
+        return String.Join(terminator, source);
+      else
+        return String.Concat(String.Join(delimiter, source.Take(source.Count - 1)), terminator, source.Last());
+    }
 
     public static Queue<T> ToQueue<T>(this IEnumerable<T> items) => new Queue<T>(items);
     //This is already optimized
