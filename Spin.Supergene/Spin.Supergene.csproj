@@ -98,6 +98,7 @@
     <Compile Remove="System\Linq\IGrouping.cs" />
     <Compile Remove="System\Runtime\InteropServices\UnmanagedBuffer.cs" />
     <Compile Remove="System\Security\Cryptography\Crc32.cs" />
+    <Compile Remove="System\Text\FluentPropertyParser.cs" />
   </ItemGroup>
 
   <ItemGroup>

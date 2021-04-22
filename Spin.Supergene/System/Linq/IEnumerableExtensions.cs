@@ -439,6 +439,8 @@ namespace System.Linq
     }
 
     public static Queue<T> ToQueue<T>(this IEnumerable<T> items) => new Queue<T>(items);
+
+    public static IEnumerable<T> Except<T>(this IEnumerable<T> source, Func<T, bool> predicate) => source.Except(source.Where(predicate));
     //This is already optimized
     //Optimize - only allocate the data needed (specified in count). Bounds already checked by indexer set.
     //public static T[] ToArray<T>(this IEnumerable<T> source, int count)

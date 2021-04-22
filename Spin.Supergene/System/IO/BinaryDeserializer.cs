@@ -34,6 +34,7 @@ namespace System.IO
     public short ReadInt16() => _reader.ReadInt16();
     public int ReadInt32() => _reader.ReadInt32();
     public long ReadInt64() => _reader.ReadInt64();
+    public ulong ReadUInt64() => _reader.ReadUInt64();
     public string ReadString() => _reader.ReadString();
     public float ReadSingle() => _reader.ReadSingle();
     public double ReadDouble() => _reader.ReadDouble();
