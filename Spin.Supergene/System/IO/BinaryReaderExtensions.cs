@@ -263,5 +263,7 @@ namespace System.IO
       var loop = ExpressionEx.For(typeof(int), param_count, x => Expression.Assign(Expression.ArrayIndex(param_data, x), Expression.Call(param_reader, func)));
       return Expression.Lambda<Func<Array, int, BinaryReader, Array>>(loop, param_data, param_count, param_reader).Compile()(ret, count, reader);
     }
+
+    public static T[] ReadArray<T>(this BinaryReader reader) => (T[])ReadArray(reader, typeof(T));
   }
 }
