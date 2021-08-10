@@ -439,6 +439,19 @@ namespace System.Linq
     }
 
     public static Queue<T> ToQueue<T>(this IEnumerable<T> items) => new Queue<T>(items);
+
+    public static IEnumerable<(TLeft, TRight)> Join<TLeft,TRight>(this IEnumerable<TLeft> left, IEnumerable<TRight> right)
+    {
+      var e = right.GetEnumerator();
+
+      foreach(var item in left)
+      {
+        if (!e.MoveNext())
+          yield break;
+        yield return (item, e.Current);
+      }
+    }
+
     //This is already optimized
     //Optimize - only allocate the data needed (specified in count). Bounds already checked by indexer set.
     //public static T[] ToArray<T>(this IEnumerable<T> source, int count)
