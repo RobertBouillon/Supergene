@@ -440,6 +440,8 @@ namespace System.Linq
 
     public static Queue<T> ToQueue<T>(this IEnumerable<T> items) => new Queue<T>(items);
 
+    public static IEnumerable<T> Except<T>(this IEnumerable<T> source, Func<T, bool> predicate) => source.Except(source.Where(predicate));
+
     public static IEnumerable<(TLeft, TRight)> Join<TLeft,TRight>(this IEnumerable<TLeft> left, IEnumerable<TRight> right)
     {
       var e = right.GetEnumerator();
