@@ -28,6 +28,6 @@ namespace System
     }
 
     protected virtual void DisposeManaged() { }
-    protected virtual void DisposeNative() { }
+    protected virtual void DisposeNative() { } //NOTE: When implementing DisposeNative, add a finalizer that calls Dispose(false)
   }
 }

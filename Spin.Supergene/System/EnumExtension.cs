@@ -7,21 +7,22 @@ namespace System
 {
   public static class EnumExtension
   {
-    public static bool HasFlag<T>(this Enum e, params T[] a) where T : struct
-    {
-      foreach (T b in a)
-      {
-        int value = (int)Convert.ChangeType(e, typeof(int));
-        int check = (int)Convert.ChangeType(b, typeof(int));
+    //Now part of the BCL
+    //public static bool HasFlag<T>(this Enum e, params T[] a) where T : struct
+    //{
+    //  foreach (T b in a)
+    //  {
+    //    int value = (int)Convert.ChangeType(e, typeof(int));
+    //    int check = (int)Convert.ChangeType(b, typeof(int));
 
-        if (check == 0)
-          return value == 0;
+    //    if (check == 0)
+    //      return value == 0;
         
-        if ((value & check) != check)
-          return false;
-      }
-      return true;
-    }
+    //    if ((value & check) != check)
+    //      return false;
+    //  }
+    //  return true;
+    //}
 
     public static bool IsFlag<T>(this Enum e, params T[] a) where T : struct
     {

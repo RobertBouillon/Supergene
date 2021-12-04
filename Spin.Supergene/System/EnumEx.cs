@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -43,10 +44,10 @@ namespace System
         yield return action(val);
     }
 
-    public static void ForEachFlag<T>(this Enum e, Action<T> action) where T: struct
+    public static void ForEachFlag<T>(this Enum e, Action<T> action) where T: Enum
     {
       foreach (T val in Enum.GetValues(typeof(T)))
-        if(e.HasFlag(val))
+        if (e.HasFlag(val))
           action(val);
     }
   }
