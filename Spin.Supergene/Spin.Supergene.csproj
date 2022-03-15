@@ -40,18 +40,21 @@
     <Compile Remove="System\Diagnostics\UnitTest\**" />
     <Compile Remove="System\Messaging\**" />
     <Compile Remove="System\Net\**" />
+    <Compile Remove="System\Threading\Tasks\**" />
     <Compile Remove="System\Windows\**" />
     <EmbeddedResource Remove="System\Collections\Hierarchy\**" />
     <EmbeddedResource Remove="System\Diagnostics\UnitTesting\**" />
     <EmbeddedResource Remove="System\Diagnostics\UnitTest\**" />
     <EmbeddedResource Remove="System\Messaging\**" />
     <EmbeddedResource Remove="System\Net\**" />
+    <EmbeddedResource Remove="System\Threading\Tasks\**" />
     <EmbeddedResource Remove="System\Windows\**" />
     <None Remove="System\Collections\Hierarchy\**" />
     <None Remove="System\Diagnostics\UnitTesting\**" />
     <None Remove="System\Diagnostics\UnitTest\**" />
     <None Remove="System\Messaging\**" />
     <None Remove="System\Net\**" />
+    <None Remove="System\Threading\Tasks\**" />
     <None Remove="System\Windows\**" />
   </ItemGroup>
 

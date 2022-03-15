@@ -338,7 +338,6 @@ namespace System.Runtime.InteropServices
       return true;
     }
 
-
     public static object InvokeGeneric<T>(string name, Type[] typeArgs, params object[] args) => InvokeGeneric(typeof(T), name, typeArgs, args);
 
     public static object InvokeGeneric(Type type, string name, Type[] typeArgs, params object[] args)
@@ -362,7 +361,7 @@ namespace System.Runtime.InteropServices
         if (method != null)
           throw new Exception($"'{name}<{String.Join(",", typeArgs.Select(x=>x.Name))}>' must be a static method");
         else
-          throw ex;
+          throw;
       }
       var allparameters = parameters.ToArray();
 
