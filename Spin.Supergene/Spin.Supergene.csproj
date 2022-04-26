@@ -110,6 +110,7 @@
     <Compile Remove="System\Runtime\InteropServices\UnmanagedBuffer.cs" />
     <Compile Remove="System\Security\Cryptography\Crc32.cs" />
     <Compile Remove="System\Text\FluentPropertyParser.cs" />
+    <Compile Remove="System\TimeoutException.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -202,9 +203,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="System\Threading\StatefulWorker.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="System\TimeoutException.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="System\Web\HttpUpload.cs">
