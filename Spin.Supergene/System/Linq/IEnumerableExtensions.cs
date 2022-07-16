@@ -397,6 +397,8 @@ namespace System.Linq
     public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> items, int seed) => Shuffle(items, new Random(seed));
     public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> items, Random random) => items.OrderBy(x => random.Next());
 
+    public static IEnumerable<T> Order<T>(this IEnumerable<T> items) => items.OrderBy(x => x);
+
     public static IEnumerable<T> InclusiveScan<T>(this IEnumerable<T> source, Func<T, T, T> operation, T seed = default)
     {
       foreach (var item in source)
