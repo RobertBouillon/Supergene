@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Platforms>AnyCPU;x64</Platforms>
     <Configurations>Debug;Release;Web Debug;PerfTest</Configurations>
   </PropertyGroup>
@@ -77,6 +77,7 @@
     <Compile Remove="System\Collections\Generic\CollectionBase.old.cs" />
     <Compile Remove="System\Collections\Generic\PoolT.cs" />
     <Compile Remove="System\Collections\Specialized\NBufferT.cs" />
+    <Compile Remove="System\ConvertEx.cs" />
     <Compile Remove="System\Data\Enumerations.cs" />
     <Compile Remove="System\Data\IDataReaderExtension.cs" />
     <Compile Remove="System\Data\SqlClient\SqlXmlBulkLoad.cs" />
@@ -89,6 +90,7 @@
     <Compile Remove="System\Diagnostics\UnitTestResultItem.cs" />
     <Compile Remove="System\Diagnostics\UnitTestResultItems.cs" />
     <Compile Remove="System\GenericObject.cs" />
+    <Compile Remove="System\Int128.cs" />
     <Compile Remove="System\IO\ActiveSync.cs" />
     <Compile Remove="System\IO\BinaryWriter.cs" />
     <Compile Remove="System\IO\CeFileStream.cs" />
@@ -111,6 +113,8 @@
     <Compile Remove="System\Security\Cryptography\Crc32.cs" />
     <Compile Remove="System\Text\FluentPropertyParser.cs" />
     <Compile Remove="System\TimeoutException.cs" />
+    <Compile Remove="System\UInt128.cs" />
+    <Compile Remove="System\UInt256.cs" />
   </ItemGroup>
 
   <ItemGroup>
