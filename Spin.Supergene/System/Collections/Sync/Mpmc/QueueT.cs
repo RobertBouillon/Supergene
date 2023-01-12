@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Collections.Sync.Mpmc
+namespace System.Collections.Sync.Mpmc;
+
+public class Queue<T>
 {
-  public class Queue<T>
-  {
-  }
 }

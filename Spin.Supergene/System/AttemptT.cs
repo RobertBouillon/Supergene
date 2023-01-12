@@ -4,38 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System
-{
-    public class Attempt<T> : Attempt
-    {
-        public T Result { get; }
+namespace System;
 
-        private Attempt(T result) : base(true) => Result = result;
-        public Attempt(T result, Func<T, bool> success) : base(success(result)) => Result = result;
-        public Attempt(bool success) : base(success) { if (success) throw new Exception("A value must be returned if the operation succeeded"); }
-        public Attempt(string error) : base(error) { }
-        public Attempt(Exception ex) : base(ex) { }
+  public class Attempt<T> : Attempt
+  {
+      public T Result { get; }
 
-        public T OrDefault(T defaultValue) => Success ? Result : defaultValue;
+      private Attempt(T result) : base(true) => Result = result;
+      public Attempt(T result, Func<T, bool> success) : base(success(result)) => Result = result;
+      public Attempt(bool success) : base(success) { if (success) throw new Exception("A value must be returned if the operation succeeded"); }
+      public Attempt(string error) : base(error) { }
+      public Attempt(Exception ex) : base(ex) { }
 
-        public bool Failed(out T result)
-        {
-            result = Result;
-            return !Success;
-        }
+      public T OrDefault(T defaultValue) => Success ? Result : defaultValue;
 
-        public bool Succeeded(out T result)
-        {
-            result = Result;
-            return Success;
-        }
+      public bool Failed(out T result)
+      {
+          result = Result;
+          return !Success;
+      }
 
-        public new T Assert()
-        {
-            base.Assert();
-            return Result;
-        }
+      public bool Succeeded(out T result)
+      {
+          result = Result;
+          return Success;
+      }
 
-        public static implicit operator Attempt<T>(T d) => new(d);
-    }
-}
+      public new T Assert()
+      {
+          base.Assert();
+          return Result;
+      }
+
+      public static implicit operator Attempt<T>(T d) => new(d);
+  }

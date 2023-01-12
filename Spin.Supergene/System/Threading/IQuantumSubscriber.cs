@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace System.Threading
+namespace System.Threading;
+
+public interface IQuantumSubscriber
 {
-  public interface IQuantumSubscriber
-  {
-    void Monitor();
-    void MonitorHeartbeat(TimeSpan interval);
-  }
+  void Monitor();
+  void MonitorHeartbeat(TimeSpan interval);
 }

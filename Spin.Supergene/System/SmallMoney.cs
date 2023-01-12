@@ -4,30 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System
+namespace System;
+
+public struct SmallMoney
 {
-  public struct SmallMoney
+  private short _value;
+
+  public SmallMoney(int value)
   {
-    private short _value;
+    _value = unchecked((short)value);
+  }
 
-    public SmallMoney(int value)
-    {
-      _value = unchecked((short)value);
-    }
+  public SmallMoney(float value)
+  {
+    _value = unchecked((short)(value * 1000));
+  }
 
-    public SmallMoney(float value)
-    {
-      _value = unchecked((short)(value * 1000));
-    }
+  public SmallMoney(double value)
+  {
+    _value = unchecked((short)(value * 1000));
+  }
 
-    public SmallMoney(double value)
-    {
-      _value = unchecked((short)(value * 1000));
-    }
-
-    public SmallMoney(decimal value)
-    {
-      _value = unchecked((short)(value * 1000));
-    }
+  public SmallMoney(decimal value)
+  {
+    _value = unchecked((short)(value * 1000));
   }
 }

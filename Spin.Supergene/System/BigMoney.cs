@@ -4,30 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System
+namespace System;
+
+public struct BigMoney
 {
-  public struct BigMoney
+  private long _value;
+
+  public BigMoney(int value)
   {
-    private long _value;
+    _value = value;
+  }
 
-    public BigMoney(int value)
-    {
-      _value = value;
-    }
+  public BigMoney(float value)
+  {
+    _value = unchecked((int)(value * 1000));
+  }
 
-    public BigMoney(float value)
-    {
-      _value = unchecked((int)(value * 1000));
-    }
+  public BigMoney(double value)
+  {
+    _value = unchecked((int)(value * 1000));
+  }
 
-    public BigMoney(double value)
-    {
-      _value = unchecked((int)(value * 1000));
-    }
-
-    public BigMoney(decimal value)
-    {
-      _value = unchecked((int)(value * 1000));
-    }
+  public BigMoney(decimal value)
+  {
+    _value = unchecked((int)(value * 1000));
   }
 }

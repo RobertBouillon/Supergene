@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Text
+namespace System.Text;
+
+public enum DisplayFormatType
 {
-  public enum DisplayFormatType
-  {
-    Date,
-    Time,
-    Text,
-    Number,
-    Decimal,
-    Currency,
-    Percentage
-  }
+  Date,
+  Time,
+  Text,
+  Number,
+  Decimal,
+  Currency,
+  Percentage
 }

@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace System
+namespace System;
+
+public class ExceptionCollection : CollectionBase<Exception>
 {
-  public class ExceptionCollection : CollectionBase<Exception>
+  #region Constructors
+  public ExceptionCollection()
   {
-    #region Constructors
-    public ExceptionCollection()
-    {
 
-    }
-
-    public ExceptionCollection(IEnumerable<Exception> exceptions)
-      : base(exceptions)
-    {
-
-    }
-    #endregion
   }
+
+  public ExceptionCollection(IEnumerable<Exception> exceptions)
+    : base(exceptions)
+  {
+
+  }
+  #endregion
 }

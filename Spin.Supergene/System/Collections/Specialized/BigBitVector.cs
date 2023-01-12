@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Collections.Specialized
+namespace System.Collections.Specialized;
+
+public class BigBitVector
 {
-  public class BigBitVector
-  {
-  }
 }

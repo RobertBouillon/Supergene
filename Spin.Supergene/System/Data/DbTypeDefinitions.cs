@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace System.Data
+namespace System.Data;
+
+class DbTypeDefinitions : CollectionBase<DbTypeDefinition>
 {
-  class DbTypeDefinitions : CollectionBase<DbTypeDefinition>
+  #region Constructors
+  public DbTypeDefinitions()
   {
-    #region Constructors
-    public DbTypeDefinitions()
-    {
-    }
-    #endregion
   }
+  #endregion
 }

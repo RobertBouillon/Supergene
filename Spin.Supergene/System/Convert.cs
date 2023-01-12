@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace System
+namespace System;
+
+public class ConvertExtension
 {
-  public class ConvertExtension
-  {
-    //public static T ChangeType<T>(this Convert c, object value)
-    //{
-    //  return (T)Convert.ChangeType(value, typeof(T));
-    //}
-  }
+  //public static T ChangeType<T>(this Convert c, object value)
+  //{
+  //  return (T)Convert.ChangeType(value, typeof(T));
+  //}
 }

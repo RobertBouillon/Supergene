@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.IO.Compression
-{
-  public static class ZipArchiveExtensions
-  {
+namespace System.IO.Compression;
 
-  }
+public static class ZipArchiveExtensions
+{
+
 }

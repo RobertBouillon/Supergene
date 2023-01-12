@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace System.Threading
-{
-  public delegate AsyncOperation StatelessAsyncMethod();
-}
+namespace System.Threading;
+
+public delegate AsyncOperation StatelessAsyncMethod();
