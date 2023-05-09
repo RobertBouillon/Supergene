@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Platforms>AnyCPU;x64</Platforms>
     <Configurations>Debug;Release;Web Debug</Configurations>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -64,6 +65,7 @@
     <Compile Remove="System\Collections\Generic\PoolT.cs" />
     <Compile Remove="System\Collections\Hierarchy\DetailedTreeNode.cs" />
     <Compile Remove="System\Collections\Specialized\NBufferT.cs" />
+    <Compile Remove="System\ConvertEx.cs" />
     <Compile Remove="System\Data\Enumerations.cs" />
     <Compile Remove="System\Data\IDataReaderExtension.cs" />
     <Compile Remove="System\Data\SqlClient\SqlXmlBulkLoad.cs" />
@@ -76,6 +78,7 @@
     <Compile Remove="System\Diagnostics\UnitTestResultItem.cs" />
     <Compile Remove="System\Diagnostics\UnitTestResultItems.cs" />
     <Compile Remove="System\GenericObject.cs" />
+    <Compile Remove="System\Int128.cs" />
     <Compile Remove="System\IO\ActiveSync.cs" />
     <Compile Remove="System\IO\BinaryWriter.cs" />
     <Compile Remove="System\IO\CeFileStream.cs" />
@@ -101,6 +104,8 @@
     <Compile Remove="System\Threading\Workers\Heartbeat.cs" />
     <Compile Remove="System\Threading\Workers\LoopWorker.cs" />
     <Compile Remove="System\Threading\Workers\MulticastWorker.cs" />
+    <Compile Remove="System\UInt128.cs" />
+    <Compile Remove="System\UInt256.cs" />
   </ItemGroup>
 
   <ItemGroup>
