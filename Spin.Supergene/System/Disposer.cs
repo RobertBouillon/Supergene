@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace System;
 
-public struct Disposer
+public class Disposer
 {
   #region Static Members
 
@@ -22,7 +19,11 @@ public struct Disposer
   }
   #endregion
 
-  public bool IsDisposed { get; private set; }
+  private volatile bool _isDisposed;
+
+  public bool IsDisposed => _isDisposed;
+
+  public Disposer() => _isDisposed = false;
 
   public void Assert()
   {
@@ -56,14 +57,14 @@ public struct Disposer
   {
     if (IsDisposed)
       throw new InvalidOperationException("Already disposed");
-    IsDisposed = true;
+    _isDisposed = true;
   }
 
   public bool TryDispose()
   {
     if (IsDisposed)
       return false;
-    IsDisposed = true;
+    _isDisposed = true;
     return true;
   }
 }
