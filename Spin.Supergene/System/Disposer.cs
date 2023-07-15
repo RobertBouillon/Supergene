@@ -4,7 +4,15 @@ namespace System;
 
 public class Disposer
 {
+  private class DisposableEnumeration : IDisposable
+  {
+    private IEnumerable<IDisposable> _source;
+    public DisposableEnumeration(IEnumerable<IDisposable> source) => _source = source;
+    public void Dispose() => Disposer.Dispose(_source);
+  }
+
   #region Static Members
+  public static IDisposable Wrap(IEnumerable<IDisposable> source) => new DisposableEnumeration(source);
 
   public static void Dispose(params IDisposable[] disposable)
   {
