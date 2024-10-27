@@ -84,4 +84,12 @@ public class DateRange : IEnumerable<DateTime>
       yield return day;
   }
   #endregion
+  public IEnumerable<DateTime> Iterate(TimeSpan interval)
+  {
+    var start = StartDate.Round(interval);
+    var end = EndDate.Round(interval);
+
+    for (var current = start; current < end; current.Add(interval))
+      yield return current;
+  }
 }
