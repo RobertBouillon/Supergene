@@ -89,7 +89,9 @@ public class DateRange : IEnumerable<DateTime>
     var start = StartDate.Round(interval);
     var end = EndDate.Round(interval);
 
-    for (var current = start; current < end; current.Add(interval))
+    for (var current = start; current < end; current = current.Add(interval))
       yield return current;
   }
+
+  public override string ToString() => $"{StartDate}-{EndDate}";
 }
