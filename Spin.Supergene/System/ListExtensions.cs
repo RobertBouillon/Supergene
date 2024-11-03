@@ -18,4 +18,6 @@ public static class ListExtensions
 
     return ret;
   }
+
+  public static void Add<T>(this List<T> list, params T[] items) => list.AddRange(items);
 }
