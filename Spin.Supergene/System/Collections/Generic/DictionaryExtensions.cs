@@ -36,4 +36,12 @@ public static class DictionaryExtensions
       dict[key] = ret = factory();
     return ret;
   }
+  
+  public static bool TryAdd<TKey, TValue>(this Dictionary<TKey, TValue> dict, TKey key, TValue value, out TValue existing)
+  {
+    if(dict.TryGetValue(key, out existing))
+      return false;
+    dict.Add(key, value);
+    return true;
+  }
 }
