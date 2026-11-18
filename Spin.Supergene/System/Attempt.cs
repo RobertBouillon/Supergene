@@ -23,10 +23,10 @@ public class Attempt
   public Attempt(string error) => _error = error;
   public Attempt(Exception ex) => Exception = ex;
 
-  public void Assert()
+  public void Assert(string exceptionMessage = null)
   {
     if (!Success)
-      throw Exception ?? new Exception(Error ?? "Attempt failed");
+      throw Exception ?? new Exception(exceptionMessage ?? Error ?? "Attempt failed");
   }
 
   public static implicit operator bool(Attempt d) => d.Success;

@@ -38,10 +38,10 @@ public class Attempt<T> : Attempt
       return Success;
   }
 
-  public new T Assert()
+  public new T Assert(string exceptionMessage = null)
   {
-      base.Assert();
-      return Result;
+    base.Assert(exceptionMessage);
+    return Result;
   }
 
   public static implicit operator Attempt<T>(T d) => new(d);
